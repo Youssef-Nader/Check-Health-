@@ -1,0 +1,230 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nutrition & Dietetics | Stay on Top of Your Health</title>
+        <link rel="icon" href="{% static 'Icons/nutrition.png' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <!-- Normalize elements -->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    </head>
+    <body>
+        <!-- Start Header -->
+        <header>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'main-page' %}" target="_blank">Specializations</a></li>
+                        <li><a href="{% url 'main-page' %}" target="_blank">About Us</a></li>
+                    </ul>
+                </nav>
+                <a class ="sign" href="{% url 'signup' %}" target="_blank">Sign Up<a>
+                <a class ="login" href="{% url 'login' %}" target="_blank">Login<a>
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- Start nutrition & dietetics -->
+        <div class="nutrition-dietetics">
+            <div class="container">
+                <h2>Nutrition & Dietetics</h2>
+                <p>Choose Your Best Doctor In <span>Nutrition & Dietetics</span> Specialize</p>
+                <p class="east-west">Doctors From the East and the West</p>
+                <div class="east-doctors">
+                    <div class="first">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Maha El-Attar</h4>
+                        <p class="title">Clinical Nutritionist - Cairo Nutrition Center</p>
+                        <p class="about-doc"> Specializes in obesity management, metabolic disorders, and meal planning.</p>
+                        <span class="fees">Fees: 150 EGP</span>
+                        <button id="maha-button">Book Now</button>
+                    </div>
+                    <div class="second">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Adel Samir</h4>
+                        <p class="title">Dietitian - Alexandria Health Institute</p>
+                        <p class="about-doc">Focuses on diabetic nutrition and heart-healthy diets.</p>
+                        <span class="fees">Fees: 260 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="third">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Salma Hegazy</h4>
+                        <p class="title">Nutrition Consultant - Assiut Wellness Clinic</p>
+                        <p class="about-doc">Expert in pregnancy and pediatric nutrition.</p>
+                        <span class="fees">Fees: 175 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fourth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Nader Fathy</h4>
+                        <p class="title">Clinical Dietitian - Mansoura Nutrition Hub</p>
+                        <p class="about-doc">Specializes in sports nutrition and weight loss programs.</p>
+                        <span class="fees">Fees: 350 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fifth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Rania Fouad</h4>
+                        <p class="title">Nutritionist - Tanta Dietary Center</p>
+                        <p class="about-doc">Focuses on liver health and digestive wellness through food.</p>
+                        <span class="fees">Fees: 400 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="sixth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Karim Mahmoud</h4>  
+                        <p class="title">Senior Dietitian - Zagazig Nutrition Institute</p>
+                        <p class="about-doc">Treats cholesterol and hypertension through diet modification.</p>
+                        <span class="fees">Fees: 375 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="seventh">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Hala Metwally</h4>
+                        <p class="title">Pediatric Nutritionist - Beni Suef Medical Complex</p>
+                        <p class="about-doc">Guides parents in meal planning and nutrition for growing children.</p>
+                        <span class="fees">Fees: 450 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="eighth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Farah Elbaz</h4>
+                        <p class="title">Nutrition Expert - Giza Wellness Clinic</p>
+                        <p class="about-doc">Combines functional nutrition and gut health restoration.</p>
+                        <span class="fees">Fees: 700 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="ninth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Osama Riad</h4>
+                        <p class="title">Dietician - Cairo Sports & Nutrition Center</p>
+                        <p class="about-doc">Designs plans for athletes and active individuals.</p>
+                        <span class="fees">Fees: 550 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="tenth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Manar Helmy</h4>
+                        <p class="title">Weight Management Specialist - Ismailia Diet Clinic</p>
+                        <p class="about-doc">Focuses on weight loss through behavior and nutrition therapy.</p>
+                        <span class="fees">Fees: 600 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="west-doctors">
+                    <div class="first">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Jennifer Lee - (American 🇺🇸)</h4>
+                        <p class="title">Nutritionist - San Francisco Wellness Center</p>
+                        <p class="about-doc">Expert in plant-based nutrition and detox programs.</p>
+                        <span class="fees">Fees: $40 USD</span>
+                        <button id="jennifer-button">Book Now</button>
+                    </div>
+                    <div class="second">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Matteo Romano - (Italian)</h4>
+                        <p class="title">Dietitian - Milan Metabolic Center</p>
+                        <p class="about-doc">Specializes in Mediterranean diet plans and insulin resistance.</p>
+                        <span class="fees">Fees: $55 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="third">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Sophie Meunier - (French)</h4>
+                        <p class="title">Clinical Dietitian - Paris Nutrition Clinic</p>
+                        <p class="about-doc">Works with clients on personalized nutrition for autoimmune conditions.</p>
+                        <span class="fees">Fees: $60 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fourth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Anna Weber - (German)</h4>
+                        <p class="title">Nutrition Coach - Berlin Vitality Lab</p>
+                        <p class="about-doc">Supports clients with digestive disorders and IBS management.</p>
+                        <span class="fees">Fees: $68 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fifth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Chloe Smith - (British)</h4>
+                        <p class="title">Wellness Dietitian - London Health Hub</p>
+                        <p class="about-doc">Focuses on weight loss and emotional eating recovery.</p>
+                        <span class="fees">Fees: $75 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="sixth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Nathan Scott - (Australian)</h4>
+                        <p class="title">Sports Nutritionist - Sydney Athlete Clinic</p>
+                        <p class="about-doc">Designs customized meal plans for performance and recovery.</p>
+                        <span class="fees">Fees: $52 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="seventh">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Laura Garcia - (Spanish )</h4>
+                        <p class="title">Nutritionist - Barcelona Health Center</p>
+                        <p class="about-doc">Promotes balanced nutrition for hormonal and thyroid health.</p>
+                        <span class="fees">Fees: $80 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="eighth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Isabella Novak - (Czech)</h4>
+                        <p class="title">Dietitian - Prague Wellness Institute</p>
+                        <p class="about-doc">Experienced in detoxification diets and gut microbiome support.</p>
+                        <span class="fees">Fees: $72 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="ninth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Olivia Carter - (Canadian)</h4>
+                        <p class="title">Clinical Nutritionist - Toronto Nutrition Solutions</p>
+                        <p class="about-doc">Guides clients with PCOS, menopause, and hormonal imbalance.</p>
+                        <span class="fees">Fees: $88 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="tenth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Erik Nilsson - (Swedish)</h4>
+                        <p class="title">Nutrition Specialist - Stockholm Fit Clinic</p>
+                        <p class="about-doc">Focuses on personalized dietary plans and genetic nutrition.</p>
+                        <span class="fees">Fees: $85 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Nutrition & Dietetics -->
+        <footer>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <div class="links">
+                    <div class="specialize">
+                        <a href="{% url 'dermatology' %}" target="_blank">Dermatology</a>
+                        <a href="{% url 'psychiatry' %}" target="_blank">Psychiatry</a>
+                        <a href="">Nutrition & Dietetics</a>
+                        <a href="{% url 'cardiology' %}" target="_blank">Cardiology</a>
+                        <a href="{% url 'orthopedics' %}" target="_blank">Orthopedics</a>
+                        <a href="{% url 'pulmonology' %}" target="_blank">Pulmonology</a>
+                    </div>
+                    <div class="other">
+                        <a href="{% url 'main-page' %}" target="_blank">Home</a>
+                        <a href="{% url 'main-page' %}" target="_blank">About us</a>
+                    </div>
+                </div>
+                <p>&copy; 2025 Check <span>Health</span>. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>

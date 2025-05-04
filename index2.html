@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Psychiatry | Stay on Top of Your Health</title>
+        <link rel="icon" href="Icons/psychiatry.png">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Normalize elements -->
+        <link rel="stylesheet" href="css/normalize.css">
+    </head>
+    <body>
+        <!-- Start Header -->
+        <header>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" target="_blank">Specializations</a></li>
+                        <li><a href="index.html" target="_blank">About Us</a></li>
+                    </ul>
+                </nav>
+                <a class ="sign" href="index7.html" target="_blank">Sign Up<a>
+                <a class ="login" href="index8.html" target="_blank">Login<a>
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- Start psychiartry -->
+        <div class="psychiatry-section">
+            <div class="container">
+                <h2>Psychiatry</h2>
+                <p>Choose Your Best Doctor In <span>Psychiatry</span> Specialize</p>
+                <p class="east-west">Doctors From the East and the West</p>
+                <div class="filters">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" onchange="filterDoctors()">
+                        <option value="all">All</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <button type="button" class="asc" onclick="sortDoctors('asc')">From Lowest to Highest</button>
+                    <button type="button" class="desc" onclick="sortDoctors('desc')">From Highest to Lowest</button>
+                </div> 
+                <div class="east-doctors">
+                    <div class="first" data-gender="female" data-fees="150">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Nouran El-Helbawi</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Consultant Psychiatrist - Ain Shams University</p>
+                        <p class="about-doc">Specializes in treating anxiety, PTSD, and mood disorders. She's also involved in mental health advocacy.</p>
+                        <span class="fees">Fees: 150 EGP</span>
+                        <button id="nouran-button">Book Now</button>
+                    </div>
+                    <div class="second" data-gender="male" data-fees="260">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Karim Abdel Wahab</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Psychiatrist - Cairo Mental Health Center</p>
+                        <p class="about-doc">Focuses on bipolar disorder and schizophrenia management, with 15+ years of clinical experience.</p>
+                        <span class="fees">Fees: 260 EGP</span>
+                        <button id="karim-button">Book Now</button>
+                    </div>
+                    <div class="third" data-gender="female" data-fees="175">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Salma Fathi</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Child & Adolescent Psychiatrist - Alexandria Children's Hospital</p>
+                        <p class="about-doc">Specializes in ADHD, learning difficulties, and behavioral therapy for youth.</p>
+                        <span class="fees">Fees: 175 EGP</span>
+                        <button id="salma-button">Book Now</button>
+                    </div>
+                    <div class="fourth" data-gender="male" data-fees="350">
+                        <img src="Icons/Male Doctor.png" alt="Male doctor">
+                        <h4>Dr. Mostafa El-Gendy</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                        </div>
+                        <p class="title">Psychiatrist - Zagazig University</p>
+                        <p class="about-doc">Expert in addiction treatment and cognitive behavioral therapy (CBT).</p>
+                        <span class="fees">Fees: 350 EGP</span>
+                        <button id="mostafa-button">Book Now</button>
+                    </div>
+                    <div class="fifth" data-gender="female" data-fees="400">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Hanaa Soliman</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Clinical Psychiatrist - Assiut Mental Wellness Center</p>
+                        <p class="about-doc">Works with women suffering from postpartum depression and anxiety.</p>
+                        <span class="fees">Fees: 400 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="sixth" data-gender="male" data-fees="375">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Ahmed Ezzat</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Consultant Psychiatrist - Helwan Hospital</p>
+                        <p class="about-doc">Treats OCD and chronic depression with modern therapeutic approaches.</p>
+                        <span class="fees">Fees: 375 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="seventh" data-gender="female" data-fees="450">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Dina Youssef</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Psychiatrist - Tanta University Clinic</p>
+                        <p class="about-doc">Focuses on trauma recovery and youth mental health support.</p>
+                        <span class="fees">Fees: 450 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="eighth" data-gender="male" data-fees="700">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Rami Maher</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Forensic Psychiatrist - Beni Suef Correctional Center</p>
+                        <p class="about-doc">Works with criminal offenders and specializes in forensic assessments.</p>
+                        <span class="fees">Fees: 700 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="ninth" data-gender="female" data-fees="550">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Mariam Said</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Consultant Dermatologist - Minya Hospital</p>
+                        <p class="about-doc">Senior Psychiatrist - Mansoura Behavioral Health Unit</p>
+                        <span class="fees">Fees: 550 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="tenth" data-gender="male" data-fees="600">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Tarek Abdel Salam</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Psychiatrist - Minya Psychiatric Clinic</p>
+                        <p class="about-doc">Blends psychotherapy with medication management for better patient outcomes.</p>
+                        <span class="fees">Fees: 600 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="west-doctors">
+                    <div class="first" data-gender="female" data-fees="40">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Emily Rhodes - (American 🇺🇸)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                        </div>
+                        <p class="title">Clinical Psychiatrist - Harvard Medical Center</p>
+                        <p class="about-doc">Specializes in adolescent psychiatry and trauma therapy.</p>
+                        <span class="fees">Fees: $40 USD</span>
+                        <button id="emily-button">Book Now</button>
+                    </div>
+                    <div class="second" data-gender="male" data-fees="55">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Liam Thompson - (British)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Psychiatrist - Oxford Mental Health Trust</p>
+                        <p class="about-doc">Expert in treating depression, anxiety, and psychotic disorders.</p>
+                        <span class="fees">Fees: $55 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="third" data-gender="female" data-fees="60">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Sofia Ricci - (Italian)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Consultant Psychiatrist - Rome Psychiatric Institute</p>
+                        <p class="about-doc">Experienced in holistic mental health therapy and family counseling.</p>
+                        <span class="fees">Fees: $60 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fourth" data-gender="female" data-fees="68">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Ava Johansson - (Swedish)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                        </div>
+                        <p class="title">Psychiatrist - Stockholm Mind Clinic</p>
+                        <p class="about-doc">Focuses on mindfulness-based cognitive therapy and stress management.</p>
+                        <span class="fees">Fees: $68 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fifth" data-gender="female" data-fees="75">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Emily Carter - (American)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Senior Consultant Psychiatrist - New York Medical Clinic</p>
+                        <p class="about-doc">Dr. Emily Carter is a highly respected psychiatrist based in New York, with over 
+                            18 years of experience in mental health care.
+                        </p>
+                        <span class="fees">Fees: $75 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="sixth" data-gender="female" data-fees="52">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Maya Dubois - (Swiss)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Clinical Psychiatrist - Geneva Behavioral Health Institute</p>
+                        <p class="about-doc">Known for integrative psychiatry and emotional wellness coaching.</p>
+                        <span class="fees">Fees: $52 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="seventh" data-gender="male" data-fees="80">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Henry Lewis - (Canadian)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Senior Psychiatrist - Toronto MindCare</p>
+                        <p class="about-doc">Treats adult ADHD, sleep disorders, and adjustment issues.</p>
+                        <span class="fees">Fees: $80 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="eighth" data-gender="female" data-fees="72">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Anya Petrov - (Russian)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Psychiatrist - Moscow Mental Health Center</p>
+                        <p class="about-doc">Specializes in bipolar disorder and long-term psychiatric care.</p>
+                        <span class="fees">Fees: $72 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="ninth" data-gender="female" data-fees="88">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Olivia Martins - (Portuguese)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Psychiatrist - Lisbon Mental Health Institute</p>
+                        <p class="about-doc">Treats anxiety, panic disorder, and depression with a cultural approach.</p>
+                        <span class="fees">Fees: $88 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="tenth" data-gender="male" data-fees="85">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Jack Morgan - (Australian)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Consultant Psychiatrist - Melbourne Mental Health Network</p>
+                        <p class="about-doc">Skilled in pharmacological treatment of anxiety and depressive disorders.</p>
+                        <span class="fees">Fees: $85 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End psychiartry -->
+        <footer>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <div class="links">
+                    <div class="specialize">
+                        <a href="index1.html" target="_blank">Dermatology</a>
+                        <a href="" >Psychiatry</a>
+                        <a href="index3.html" target="_blank">Nutrition & Dietetics</a>
+                        <a href="index4.html" target="_blank">Cardiology</a>
+                        <a href="index5.html" target="_blank">Orthopedics</a>
+                        <a href="index6.html" target="_blank">Pulmonology</a>
+                    </div>
+                    <div class="other">
+                        <a href="">Home</a>
+                        <a href="">About us</a>
+                    </div>
+                </div>
+                <p>&copy; 2025 Check <span>Health</span>. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Check Health | Login</title>
+        <link rel="icon" href="{% static 'Icons/check health title icon.png' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'main-page' %}" target="_blank">Specializations</a></li>
+                        <li><a href="{% url 'main-page' %}" target="_blank">About Us</a></li>
+                    </ul>
+                </nav>
+                <a class ="sign" href="{% url 'signup' %}" target="_blank">Sign Up<a>
+                <a class ="login" href="{% url 'login' %}">Login<a> {#  Modified the login URL #}
+            </div>
+        </header>
+        <div class="login-page">
+            <div class="container">
+                <h2>Login</h2>
+                {% if error %}
+                    <p style="color: red;">{{ error }}</p>
+                {% endif %}
+                <form action="{% url 'login' %}" id="Login" class="login" method="post"> {#  Modified the form action #}
+                    {% csrf_token %} {#  Added CSRF token for security #}
+                    <div class="username">
+                        <label for="">Username:</label>
+                        <input type="text" name="username" required>
+                    </div>
+                    <div class="pass">
+                        <label for="">Password:</label>
+                        <input type="password" name="password" required> {#  Keeped the name as password #}
+                    </div>
+                    <div class="remember-forget">
+                        <div class="remember">
+                            <input type="checkbox" value="checked" name="remember" id="rem">
+                            <label for="rem">Remember Me</label>
+                        </div>
+                        <a href="">Forget Your Password?</a>
+                    </div>
+                    <div class="submit"><input type="submit" value="Login"></div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <div class="links">
+                    <div class="specialize">
+                        <a href="{% url 'dermatology' %}" target="_blank">Dermatology</a>
+                        <a href="{% url 'psychiatry' %}" target="_blank">Psychiatry</a>
+                        <a href="{% url 'nutrition-dietetics' %}" target="_blank">Nutrition & Dietetics</a>
+                        <a href="{% url 'cardiology' %}" target="_blank">Cardiology</a>
+                        <a href="{% url 'orthopedics' %}" target="_blank">Orthopedics</a>
+                        <a href="{% url 'pulmonology' %}" target="_blank">Pulmonology</a>
+                    </div>
+                    <div class="other">
+                        <a href="{% url 'main-page' %}" target="_blank">Home</a>
+                        <a href="{% url 'main-page' %}" target="_blank">About us</a>
+                    </div>
+                </div>
+                <p>&copy; 2025 Check <span>Health</span>. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>

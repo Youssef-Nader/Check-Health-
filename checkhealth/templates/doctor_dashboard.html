@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor Dashboard</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <style>
+            body {
+                font-family: 'Tajawal', sans-serif;
+                background-color: #f0f4f8;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            header {
+                background-color: #28a745; /* لون أخضر للدكتور */
+                padding: 20px 0;
+                color: white;
+                text-align: center;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            header h1 {
+                margin: 0;
+                font-size: 24px;
+            }
+            main {
+                padding: 20px 0;
+                min-height: calc(100vh - 160px);
+            }
+            .dashboard-content {
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            }
+            .dashboard-greeting {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .dashboard-section {
+                margin-bottom: 30px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #eee;
+            }
+            .dashboard-section h2 {
+                font-size: 22px;
+                margin-bottom: 15px;
+                color: #28a745; /* لون أخضر للدكتور */
+            }
+            .dashboard-section ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .dashboard-section ul li {
+                background-color: #f5f5f5;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid #ddd;
+            }
+            .dashboard-section ul li span {
+                font-weight: bold;
+                color: #28a745; /* لون أخضر للدكتور */
+            }
+            .dashboard-section ul li a {
+                color: #28a745; /* لون أخضر للدكتور */
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+            .dashboard-section ul li a:hover {
+                color: #218838;
+            }
+            footer {
+                background-color: #343a40;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 40px;
+            }
+            footer p {
+                margin: 0;
+                font-size: 14px;
+            }
+            @media (max-width: 768px) {
+                .container {
+                    padding: 10px;
+                }
+                header h1 {
+                    font-size: 20px;
+                }
+                .dashboard-content {
+                    padding: 20px;
+                }
+                .dashboard-section h2 {
+                    font-size: 20px;
+                }
+                .dashboard-section ul li {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .dashboard-section ul li span {
+                    margin-bottom: 5px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Doctor Dashboard</h1>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="dashboard-content">
+                    <div class="dashboard-greeting">
+                        Welcome, Dr. {{ request.user.username }}!
+                    </div>
+                    <section class="dashboard-section">
+                        <h2>Personal Information</h2>
+                        <ul>
+                            <li><span>Username:</span> {{ request.user.username }}</li>
+                            <li><span>Email:</span> {{ request.user.email }}</li>
+                            <li><span>User Type:</span> Doctor</li>
+                        </ul>
+                    </section>
+                    <section class="dashboard-section">
+                        <h2>My Patients</h2>
+                        <ul>
+                            <li><a href="#">View Patients</a></li>
+                        </ul>
+                    </section>
+                    <section class="dashboard-section">
+                        <h2>My Appointments</h2>
+                        <ul>
+                            <li><a href="#">View Appointments</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <p>&copy; {{ year }} All rights reserved.</p>
+            </div>
+        </footer>
+        <script>
+        // You can add any JavaScript specific to the page here
+        </script>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Check Health | Stay on Top of Your Health</title>
+        <link rel="icon" href="{% static 'Icons/check health title icon.png' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <!-- Normalize elements -->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    </head>
+    <body>
+        <!-- Start header -->
+        <header>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'main-page' %}" target="_blank">Specializations</a></li>
+                        <li><a href="{% url 'main-page' %}" target="_blank">About Us</a></li>
+                    </ul>
+                </nav>
+                <a class ="sign" href="">Sign Up<a>
+                <a class ="login" href="{% url 'login' %}" target="_blank">Login<a>
+            </div>
+        </header>
+        <!-- End header -->
+        <!-- Start Sign Up Form -->
+        <div class="signup-page">
+            <div class="container">
+                <h2>Sign Up</h2>
+                <form action="" id="sign-up" class="sign" method="post">
+                    <div class="first">
+                        <label>First Name:</label>
+                        <input type="text" name="firstName">
+                        <div class="error" id="firstNameError"></div>
+                    </div>
+                    <div class="second">
+                        <label>Second Name:</label>
+                        <input type="text" name="SecondName">
+                        <div class="error" id="secondNameError"></div>
+                    </div>
+                    <div class="pass">
+                        <label>Password:</label>
+                        <input type="password" name="Password">
+                        <div class="error" id="passwordError"></div>
+                    </div>
+                    <div class="mobile">
+                        <label>Mobile Number:</label>
+                        <input type="tel" name="Mobile">
+                        <div class="error" id="mobileError"></div>
+                    </div>
+                    <div class="email">
+                        <label>Email Address:</label>
+                        <input type="email" name="Email">
+                        <div class="error" id="emailError"></div>
+                    </div>
+                    <div class="gender">
+                        <label>Gender:</label><br>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                        <div class="error" id="genderError"></div>
+                    </div>
+                    <div class="datebirth">
+                        <label>Date of Birth:</label>
+                        <input type="date" name="birthdate">
+                        <div class="error" id="dobError"></div>
+                    </div>                    
+                    <input type="submit">
+                    <input type="reset">
+                </form>
+            </div>  
+        </div>
+        <!-- End Sign Up Form -->
+        <!-- Start footer -->
+        <footer>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <div class="links">
+                    <div class="specialize">
+                        <a href="{% url 'dermatology' %}" target="_blank">Dermatology</a>
+                        <a href="{% url 'psychiatry' %}" target="_blank">Psychiatry</a>
+                        <a href="{% url 'nutrition-dietetics' %}" target="_blank">Nutrition & Dietetics</a>
+                        <a href="{% url 'cardiology' %}" target="_blank">Cardiology</a>
+                        <a href="{% url 'orthopedics' %}" target="_blank">Orthopedics</a>
+                        <a href="{% url 'pulmonology' %}" target="_blank">Pulmonology</a>
+                    </div>
+                    <div class="other">
+                        <a href="{% url 'main-page' %}" target="_blank">Home</a>
+                        <a href="{% url 'main-page' %}" target="_blank">About us</a>
+                    </div>
+                </div>
+                <p>&copy; 2025 Check <span>Health</span>. All rights reserved.</p>
+            </div>
+        </footer>
+        <!-- End footer -->
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>

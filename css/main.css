@@ -1,0 +1,1238 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* End Global Rules */
+/* Start variables */
+:root {
+    --main-color: rgb(0, 119, 255);
+    --secondary-color: rgba(255, 0, 0, 0.87);
+    scroll-behavior: smooth;
+}
+/* End variables */
+/* Start header */
+header {
+    background-color: var(--main-color);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 0px 4px 2px gray;
+}
+header .container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .title {
+    color: white;
+}
+header .title .second {
+    margin-top: -32px;
+    margin-left: 38px;
+    transform: skewX(-15deg);
+    color: var(--secondary-color);
+}
+header nav {
+    flex: 1;
+}
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+header nav ul li {
+    list-style-type: none;
+    margin-left: 30px;
+}
+header nav ul li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+} 
+header nav ul li a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+header .container .sign {
+    background-color: var(--secondary-color);
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    transition: .2s;
+    font-weight: bold;
+}
+header .container .sign:hover {
+    background-color: rgba(255, 0, 0, 0.767);
+}
+header .container .login {
+    border: 1px solid white;
+    padding: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    transition: .2s;
+    font-weight: bold;
+}
+header .container .login:hover {
+    background-color: rgba(255, 255, 255, 0.123);
+}
+/* Start Media Queries */
+/* for small screens */
+@media (max-width: 480px) {
+    header nav ul li a {
+        font-size: 17px;
+    }
+    header .container .sign,
+    header .container .login {
+        font-size: 15px;
+    }
+}
+/* for medium screens */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+    }
+    header .container .title h1 {
+        font-size: 25px;
+    }
+    header .title .second {
+        margin-left: 20px;
+        margin-top: -20px;
+    }
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    header nav ul li {
+        margin: 10px 0;
+    }
+    header .container .sign,
+    header .container .login {
+        margin-left: 0;
+        letter-spacing: 1px;
+    }
+    header .container .sign {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    header .container .login {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+/* For larger screens */
+@media (max-width: 1024px) {
+    header .container {
+        width: 90%;
+    }
+}
+/* For huge screens */
+@media (min-width: 1025px) {
+    header .container {
+        width: 90%; 
+    }
+    header .title .first {
+        font-size: 2.5em;
+    }
+    header .title .second {
+        font-size: 2.5em;
+        margin-top: -40px; 
+    }
+}
+/* End Media Queries */
+/* End header */
+/* Start hero section */
+.hero-section {
+    margin-top: 50px;
+    position: relative;
+}
+.hero-section::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 60%);
+    width: 100%;
+    height: 100%;
+}
+.hero-section .container{
+    height: 700px;
+}
+.hero-section .container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.hero-section .container p {
+    position: absolute;
+    color: white;
+    top: 50%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.hero-section .container p span {
+    color: var(--main-color);
+}
+/* Start Media queries */
+/* For huge screens */
+@media (min-width: 1025px) {
+    .hero-section .container p {
+        left: 5%;
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+/* For larger screens */
+@media (max-width: 1024px) {
+    .hero-section .container {
+        height: auto;
+    }
+    .hero-section .container p {
+        left: 2%;
+        font-size: 22px;
+        top: 45%;
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+/* for medium screens */
+@media (max-width: 768px) {
+    .hero-section .container {
+        height: auto;
+    }
+    .hero-section .container p {
+        left: 5%;
+        font-size: 20px;
+    }
+}
+/* For smaller screens */
+@media (max-width: 480px) {
+    .hero-section {
+        margin-top: 30px;
+    }
+    .hero-section .container p {
+        font-size: 16px;
+        left: 0;
+    }
+}
+/* End Media queries */
+/* End hero section */
+/* Start specializations */
+.specializations {
+    margin-top: 20px;
+}
+.specializations h2 {
+    width: 85%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: normal;
+    color: var(--main-color);
+    letter-spacing: 2px;
+}
+.specializations .container {
+    width: 85%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.specializations .container a {
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+}
+.specializations .container a img {
+    width: 50px;
+}
+.specializations .container a p {
+    color: black;
+    font-size: 19px;
+}
+.specializations .container a:hover p {
+    color: var(--main-color);
+}
+/* Start media queries */
+/* For huge screens */
+@media (min-width: 1025px) {
+    /* No codes in this media */
+}
+/* For larger screens */
+@media (max-width: 1024px) {
+    .specializations .container {
+        width: 90%;
+        gap: 20px;
+    }
+    .specializations .container a p {
+        font-size: 22px;
+    }
+}
+/* for medium screens */
+@media (max-width: 768px) {
+    .specializations .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .specializations .container a img {
+        width: 40px;
+    }
+    .specializations .container a p {
+        letter-spacing: 1.5px;
+        font-size: 20px;
+    }
+}
+/* For smaller screens */
+@media (max-width: 480px) {
+    .specializations .container a p {
+        font-size: 19px
+    }
+}
+/* End media queries */
+/* End specializations */
+/* Start about */
+.about {
+    padding: 40px 0;
+    margin-top: 20px;
+    background: linear-gradient(-120deg,var(--main-color) 20%,rgba(0, 0, 0, 0.753) 100%);
+}
+.about .container {
+    width: 75%;
+    padding-left: 6%;
+}
+.about .container p {
+    line-height: 1.6;
+    font-size: 22px;
+    color: white;
+    box-shadow: 2px 2px 10px 1px white;
+    padding: 20px;
+}
+.about .container p span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* Start media queries */
+/* For huge screens */
+/* For larger screens */
+@media (max-width: 1024px) {
+    .about .container {
+        width: 90%;
+    }
+}
+/* for medium screens */
+@media (max-width: 768px) {
+    .about {
+        background: linear-gradient(-100deg,var(--main-color) 20%,rgba(0, 0, 0, 0.753) 100%);
+    }
+    .about .container p {
+        font-size: 18px;
+    }
+}
+/* For smaller screens */
+@media (max-width: 480px) {
+    .about .container {
+        width: 95%;
+    }
+}
+/* End media queries */
+/* End about */
+/* Start footer */
+footer {
+    margin-top: 30px;
+}
+footer .container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+footer .container .title {
+    align-self: flex-start;
+}
+footer .title h1 {
+    font-size: 2.5rem;  /*  Equal to 40px  = 2.5 * 16 */
+    font-size: 36px;
+    margin-top: 0;
+}
+footer .title .first {
+    color: var(--main-color);
+}
+footer .title .second {
+    margin-top: -32px;
+    margin-left: 38px;
+    transform: skewX(-15deg);
+    color: var(--secondary-color);
+}
+footer .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+}
+footer .links a {
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    transition: .1s;
+}
+footer .links a:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+footer .links .specialize,
+footer .links .other{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+footer .container p {
+    font-size: 17px;
+    align-self: flex-end;
+}
+footer .container p span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* Start media queries */
+/* for medium screens */
+@media (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+    footer .title h1 {
+        font-size: 25px;
+    }
+    footer .title .second {
+        margin-top: -20px;
+        margin-left: 20px;
+        transform: skewX(-15deg);
+        color: var(--secondary-color);
+    }
+    footer .links {
+        /* border: 1px solid green; */
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 50px;
+    }
+    footer .container p {
+        margin: 50px auto 10px;
+    }
+}
+/* End media queries */
+/* End footer */
+/* Start specialties */
+.dermatology-section,
+.psychiatry-section,
+.nutrition-dietetics,
+.cardiology-section,
+.orthopedics-section,
+.pulmonology-section {
+    margin-top: 50px;
+    background-color: #dddd;
+    padding: 20px 0;
+}
+.dermatology-section .container,
+.psychiatry-section .container,
+.nutrition-dietetics .container,
+.cardiology-section .container,
+.orthopedics-section .container,
+.pulmonology-section .container {
+    width: 90%;
+    margin: 0 auto;
+}
+.dermatology-section .container h2,
+.psychiatry-section .container h2,
+.nutrition-dietetics .container h2,
+.cardiology-section .container h2,
+.orthopedics-section .container h2,
+.pulmonology-section .container h2 {
+    color: var(--main-color);
+}
+.dermatology-section .container p,
+.psychiatry-section .container p,
+.nutrition-dietetics .container p,
+.cardiology-section .container p,
+.orthopedics-section .container p,
+.pulmonology-section .container p {
+    margin-top: 30px;
+    font-size: 18px;
+}
+.dermatology-section .container p span,
+.psychiatry-section .container p span,
+.nutrition-dietetics .container p span,
+.cardiology-section .container p span,
+.orthopedics-section .container p span,
+.pulmonology-section .container p span {
+    color: var(--main-color);
+    font-weight: bold;
+    font-style: italic;
+}
+.dermatology-section .container .east-west,
+.psychiatry-section .container .east-west,
+.nutrition-dietetics .container .east-west,
+.cardiology-section .container .east-west,
+.orthopedics-section .container .east-west,
+.pulmonology-section .container .east-west {
+    color: var(--main-color);
+    font-weight: bold;
+}
+.dermatology-section .container .filters,
+.psychiatry-section .container .filters,
+.nutrition-dietetics .container .filters,
+.cardiology-section .container .filters,
+.orthopedics-section .container .filters,
+.pulmonology-section .container .filters {
+    width: 50%;
+    margin: 20px auto 0;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px var(--main-color);
+    font-size: 16px;
+}
+.dermatology-section .container .filters select,
+.psychiatry-section .container .filters select,
+.nutrition-dietetics .container .filters select,
+.cardiology-section .container .filters select,
+.orthopedics-section .container .filters select,
+.pulmonology-section .container .filters select {
+    margin-right: 20px;
+    padding: 10px 5px;
+}
+.dermatology-section .container .filters button,
+.psychiatry-section .container .filters button,
+.nutrition-dietetics .container .filters button,
+.cardiology-section .container .filters button,
+.orthopedics-section .container .filters button,
+.pulmonology-section .container .filters button {
+    padding: 10px 5px;
+    cursor: pointer;
+}
+.dermatology-section .container .filters .asc,
+.psychiatry-section .container .filters .asc,
+.nutrition-dietetics .container .filters .asc,
+.cardiology-section .container .filters .asc,
+.orthopedics-section .container .filters .asc,
+.pulmonology-section .container .filters .asc {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border: 1px solid var(--main-color);
+}
+.dermatology-section .container .filters .desc,
+.psychiatry-section .container .filters .desc,
+.nutrition-dietetics .container .filters .desc,
+.cardiology-section .container .filters .desc,
+.orthopedics-section .container .filters .desc,
+.pulmonology-section .container .filters .desc {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border: 1px solid var(--secondary-color);
+    margin-left: 20px;
+}
+/* End specialties */
+/* Start doctors */
+.dermatology-section .container .east-doctors,
+.dermatology-section .container .west-doctors,
+.psychiatry-section .container .east-doctors, 
+.psychiatry-section .container .west-doctors, 
+.nutrition-dietetics .container .east-doctors, 
+.nutrition-dietetics .container .west-doctors, 
+.cardiology-section .container .east-doctors, 
+.cardiology-section .container .west-doctors, 
+.orthopedics-section .container .east-doctors,
+.orthopedics-section .container .west-doctors,
+.pulmonology-section .container .east-doctors,
+.pulmonology-section .container .west-doctors {
+    margin-top: 50px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px 0;         /* row: 30px, column: 0*/
+}
+.dermatology-section .container .east-doctors div, 
+.dermatology-section .container .west-doctors div, 
+.psychiatry-section .container .east-doctors div, 
+.psychiatry-section .container .west-doctors div, 
+.nutrition-dietetics .container .east-doctors div, 
+.nutrition-dietetics .container .west-doctors div, 
+.cardiology-section .container .east-doctors div, 
+.cardiology-section .container .west-doctors div, 
+.orthopedics-section .container .east-doctors div, 
+.orthopedics-section .container .west-doctors div, 
+.pulmonology-section .container .east-doctors div,
+.pulmonology-section .container .west-doctors div {
+    width: calc(80% / 2);
+    box-shadow: 2px 2px 5px 0 var(--main-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+.dermatology-section .container .east-doctors div img, 
+.dermatology-section .container .west-doctors div img, 
+.psychiatry-section .container .east-doctors div img, 
+.psychiatry-section .container .west-doctors div img, 
+.nutrition-dietetics .container .east-doctors div img,
+.nutrition-dietetics .container .west-doctors div img,
+.cardiology-section .container .east-doctors div img, 
+.cardiology-section .container .west-doctors div img, 
+.orthopedics-section .container .east-doctors div img, 
+.orthopedics-section .container .west-doctors div img, 
+.pulmonology-section .container .east-doctors div img,
+.pulmonology-section .container .west-doctors div img {
+    border-radius: 50%;
+    border: 3px solid var(--main-color) ;
+    padding: 8px;
+}
+.dermatology-section .container .east-doctors div h4, 
+.dermatology-section .container .west-doctors div h4, 
+.psychiatry-section .container .east-doctors div h4, 
+.psychiatry-section .container .west-doctors div h4, 
+.nutrition-dietetics .container .east-doctors div h4,
+.nutrition-dietetics .container .west-doctors div h4,
+.cardiology-section .container .east-doctors div h4, 
+.cardiology-section .container .west-doctors div h4, 
+.orthopedics-section .container .east-doctors div h4, 
+.orthopedics-section .container .west-doctors div h4, 
+.pulmonology-section .container .east-doctors div h4,
+.pulmonology-section .container .west-doctors div h4 {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-top: 10px;
+}
+.dermatology-section .container .east-doctors div .rating, 
+.dermatology-section .container .west-doctors div .rating, 
+.psychiatry-section .container .east-doctors div .rating, 
+.psychiatry-section .container .west-doctors div .rating, 
+.nutrition-dietetics .container .east-doctors div .rating,
+.nutrition-dietetics .container .west-doctors div .rating,
+.cardiology-section .container .east-doctors div .rating, 
+.cardiology-section .container .west-doctors div .rating, 
+.orthopedics-section .container .east-doctors div .rating, 
+.orthopedics-section .container .west-doctors div .rating, 
+.pulmonology-section .container .east-doctors div .rating,
+.pulmonology-section .container .west-doctors div .rating {
+    letter-spacing: 1.5px;
+    padding: 0;
+    border-radius: 0;
+    display: inline-block;
+    box-shadow: none;
+    font-size: 0;
+    line-height: 0;
+    margin-top: 8px;
+    user-select: none;
+}
+.dermatology-section .container .east-doctors div .rating span, 
+.dermatology-section .container .west-doctors div .rating span, 
+.psychiatry-section .container .east-doctors div .rating span, 
+.psychiatry-section .container .west-doctors div .rating span, 
+.nutrition-dietetics .container .east-doctors div .rating span,
+.nutrition-dietetics .container .west-doctors div .rating span,
+.cardiology-section .container .east-doctors div .rating span, 
+.cardiology-section .container .west-doctors div .rating span, 
+.orthopedics-section .container .east-doctors div .rating span, 
+.orthopedics-section .container .west-doctors div .rating span, 
+.pulmonology-section .container .east-doctors div .rating span,
+.pulmonology-section .container .west-doctors div .rating span {
+    font-size: 20px;
+    color: #ccc;
+    display: inline-block;
+    line-height: 1;
+}
+.dermatology-section .container .east-doctors div .rating span.filled, 
+.dermatology-section .container .west-doctors div .rating span.filled, 
+.psychiatry-section .container .east-doctors div .rating span.filled, 
+.psychiatry-section .container .west-doctors div .rating span.filled, 
+.nutrition-dietetics .container .east-doctors div .rating span.filled,
+.nutrition-dietetics .container .west-doctors div .rating span.filled,
+.cardiology-section .container .east-doctors div .rating span.filled, 
+.cardiology-section .container .west-doctors div .rating span.filled, 
+.orthopedics-section .container .east-doctors div .rating span.filled, 
+.orthopedics-section .container .west-doctors div .rating span.filled, 
+.pulmonology-section .container .east-doctors div .rating span.filled,
+.pulmonology-section .container .west-doctors div .rating span.filled {
+    color: #f1c40f;
+}
+.dermatology-section .container .east-doctors div .title, 
+.dermatology-section .container .west-doctors div .title, 
+.psychiatry-section .container .east-doctors div .title,
+.psychiatry-section .container .west-doctors div .title,
+.nutrition-dietetics .container .east-doctors div .title,
+.nutrition-dietetics .container .west-doctors div .title,
+.cardiology-section .container .east-doctors div .title, 
+.cardiology-section .container .west-doctors div .title, 
+.orthopedics-section .container .east-doctors div .title, 
+.orthopedics-section .container .west-doctors div .title, 
+.pulmonology-section .container .east-doctors div .title,
+.pulmonology-section .container .west-doctors div .title {
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.dermatology-section .container .east-doctors div .about-doc,
+.dermatology-section .container .west-doctors div .about-doc,
+.psychiatry-section .container .east-doctors div .about-doc,
+.psychiatry-section .container .west-doctors div .about-doc,
+.nutrition-dietetics .container .east-doctors div .about-doc,
+.nutrition-dietetics .container .west-doctors div .about-doc,
+.cardiology-section .container .east-doctors div .about-doc,
+.cardiology-section .container .west-doctors div .about-doc,
+.orthopedics-section .container .east-doctors div .about-doc,
+.orthopedics-section .container .west-doctors div .about-doc,
+.pulmonology-section .container .east-doctors div .about-doc,
+.pulmonology-section .container .west-doctors div .about-doc {
+    line-height: 1.6;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.76);
+}
+.dermatology-section .container .east-doctors div .fees,
+.dermatology-section .container .west-doctors div .fees,
+.psychiatry-section .container .east-doctors div .fees,
+.psychiatry-section .container .west-doctors div .fees,
+.nutrition-dietetics .container .east-doctors div .fees,
+.nutrition-dietetics .container .west-doctors div .fees,
+.cardiology-section .container .east-doctors div .fees, 
+.cardiology-section .container .west-doctors div .fees, 
+.orthopedics-section .container .east-doctors div .fees, 
+.orthopedics-section .container .west-doctors div .fees, 
+.pulmonology-section .container .east-doctors div .fees,
+.pulmonology-section .container .west-doctors div .fees {
+    display: block;
+    margin-top: 25px;
+    font-weight: bold;
+}
+.dermatology-section .container .east-doctors div button,
+.dermatology-section .container .west-doctors div button,
+.psychiatry-section .container .east-doctors div button,
+.psychiatry-section .container .west-doctors div button,
+.nutrition-dietetics .container .east-doctors div button,
+.nutrition-dietetics .container .west-doctors div button,
+.cardiology-section .container .east-doctors div button, 
+.cardiology-section .container .west-doctors div button, 
+.orthopedics-section .container .east-doctors div button, 
+.orthopedics-section .container .west-doctors div button, 
+.pulmonology-section .container .east-doctors div button,
+.pulmonology-section .container .west-doctors div button {
+    display: block;
+    width: 85%;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    height: 40px;
+    margin: 20px auto 10px;
+    border: 1px solid red;
+    cursor: pointer;
+    transition: .2s;
+}
+.dermatology-section .container .east-doctors div button:hover,
+.dermatology-section .container .west-doctors div button:hover,
+.psychiatry-section .container .east-doctors div button:hover,
+.psychiatry-section .container .west-doctors div button:hover,
+.nutrition-dietetics .container .east-doctors div button:hover,
+.nutrition-dietetics .container .west-doctors div button:hover,
+.cardiology-section .container .east-doctors div button:hover, 
+.cardiology-section .container .west-doctors div button:hover, 
+.orthopedics-section .container .east-doctors div button:hover, 
+.orthopedics-section .container .west-doctors div button:hover, 
+.pulmonology-section .container .east-doctors div button:hover, 
+.pulmonology-section .container .west-doctors div button:hover {
+    background-color: rgba(255, 0, 0, 0.692);
+}
+/* Start media queries */
+@media (max-width: 768px) {
+    .dermatology-section .container .east-doctors,
+    .dermatology-section .container .west-doctors,
+    .psychiatry-section .container .east-doctors, 
+    .psychiatry-section .container .west-doctors, 
+    .nutrition-dietetics .container .east-doctors, 
+    .nutrition-dietetics .container .west-doctors, 
+    .cardiology-section .container .east-doctors, 
+    .cardiology-section .container .west-doctors, 
+    .orthopedics-section .container .east-doctors,
+    .orthopedics-section .container .west-doctors,
+    .pulmonology-section .container .east-doctors,
+    .pulmonology-section .container .west-doctors {
+        flex-direction: column;
+    }
+    .dermatology-section .container .east-doctors div, 
+    .dermatology-section .container .west-doctors div, 
+    .psychiatry-section .container .east-doctors div, 
+    .psychiatry-section .container .west-doctors div, 
+    .nutrition-dietetics .container .east-doctors div, 
+    .nutrition-dietetics .container .west-doctors div, 
+    .cardiology-section .container .east-doctors div, 
+    .cardiology-section .container .west-doctors div, 
+    .orthopedics-section .container .east-doctors div, 
+    .orthopedics-section .container .west-doctors div, 
+    .pulmonology-section .container .east-doctors div,
+    .pulmonology-section .container .west-doctors div {
+        width: 100%;
+    }
+    .dermatology-section .container .east-doctors div img, 
+    .dermatology-section .container .west-doctors div img, 
+    .psychiatry-section .container .east-doctors div img, 
+    .psychiatry-section .container .west-doctors div img, 
+    .nutrition-dietetics .container .east-doctors div img,
+    .nutrition-dietetics .container .west-doctors div img,
+    .cardiology-section .container .east-doctors div img, 
+    .cardiology-section .container .west-doctors div img, 
+    .orthopedics-section .container .east-doctors div img, 
+    .orthopedics-section .container .west-doctors div img, 
+    .pulmonology-section .container .east-doctors div img,
+    .pulmonology-section .container .west-doctors div img {
+        width: 80px;
+    }
+    .dermatology-section .container .filters,
+    .psychiatry-section .container .filters,
+    .nutrition-dietetics .container .filters,
+    .cardiology-section .container .filters,
+    .orthopedics-section .container .filters,
+    .pulmonology-section .container .filters {
+        width: 100%;
+    }
+    
+}
+/* For smaller screens */
+@media (max-width: 480px) {
+    .dermatology-section .container .filters,
+    .psychiatry-section .container .filters,
+    .nutrition-dietetics .container .filters,
+    .cardiology-section .container .filters,
+    .orthopedics-section .container .filters,
+    .pulmonology-section .container .filters {
+        width: 60%;
+        letter-spacing: 1.5px;
+    }
+    .dermatology-section .container .filters select,
+    .psychiatry-section .container .filters select,
+    .nutrition-dietetics .container .filters select,
+    .cardiology-section .container .filters select,
+    .orthopedics-section .container .filters select,
+    .pulmonology-section .container .filters select {
+        margin: 0;
+        
+    }
+    .dermatology-section .container .filters .asc,
+    .psychiatry-section .container .filters .asc,
+    .nutrition-dietetics .container .filters .asc,
+    .cardiology-section .container .filters .asc,
+    .orthopedics-section .container .filters .asc,
+    .pulmonology-section .container .filters .asc {
+        margin: 20px 0 0;
+    }
+    .dermatology-section .container .filters .desc,
+    .psychiatry-section .container .filters .desc,
+    .nutrition-dietetics .container .filters .desc,
+    .cardiology-section .container .filters .desc,
+    .orthopedics-section .container .filters .desc,
+    .pulmonology-section .container .filters .desc {
+        margin: 20px 0 0;
+    }
+}
+/* End media queries */
+/* End doctors */
+/* Start sign up page */
+.signup-page {
+    padding: 20px 0;
+    /* border: 1px solid red; */
+    background-color: #dddd;
+}
+.signup-page .container {
+    /* border: 1px solid green; */
+    box-shadow:  2px 2px 5px 0 var(--main-color);
+    width: 50%;
+    margin: 30px auto;
+    padding: 20px 0;
+    background-color: white;
+    border-radius: 5px;
+}
+.signup-page .container h2, 
+.signup-page .container form {
+    text-align: center;
+}
+.signup-page .container h2 {
+    /* border: 1px solid red; */
+    color: var(--main-color);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.signup-page form .first, 
+.signup-page form .second,
+.signup-page form .pass,
+.signup-page form .mobile,
+.signup-page form .email,
+.signup-page form .gender, 
+.signup-page form .datebirth {
+    width: 70%;
+    margin: 0px auto 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.signup-page form .gender {
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    width: 55%;
+}
+.signup-page form .first label, 
+.signup-page form .second label, 
+.signup-page form .pass label, 
+.signup-page form .mobile label,
+.signup-page form .email label, 
+.signup-page form .gender label, 
+.signup-page form .datebirth label {
+    font-size: 18px;
+}
+.signup-page form .first input,
+.signup-page form .second input, 
+.signup-page form .pass input, 
+.signup-page form .mobile input, 
+.signup-page form .email input,
+.signup-page form .datebirth input {
+    outline: none;
+    padding: 8px 10px;
+    width: 300px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.466);
+}
+.signup-page form input[type = "submit"],
+.signup-page form input[type = "reset"] {
+    margin-left: 20px;
+    padding: 10px 20px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+}
+.signup-page form input[type = "submit"] {
+    background: var(--main-color);
+    color: white;
+}
+.signup-page form input[type = "reset"] {
+    background-color: var(--secondary-color);
+    color: white;
+}
+.signup-page form .error {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+/* Start media queries */
+/* For huge screens */
+@media (min-width: 1025px) {
+    /* No media queries */
+}
+/* For larger screens */
+@media (max-width: 1024px) {
+    .signup-page .container {
+        width: 60%;
+    }
+    .signup-page form .first, 
+    .signup-page form .second,
+    .signup-page form .pass,
+    .signup-page form .mobile,
+    .signup-page form .email,
+    .signup-page form .gender, 
+    .signup-page form .datebirth {
+        width: 90%;
+    }
+    .signup-page form .gender {
+        width: 75%;
+        justify-content: space-between;
+    }
+    .signup-page form .first label, 
+    .signup-page form .second label, 
+    .signup-page form .pass label, 
+    .signup-page form .mobile label,
+    .signup-page form .email label, 
+    .signup-page form .gender label, 
+    .signup-page form .datebirth label {
+        font-size: 17px;
+        letter-spacing: 1.5px;
+    }
+}
+/* for medium screens */
+@media (max-width: 768px) {
+    .signup-page .container {
+        width: 90%;
+    }
+    .signup-page form .gender {
+        width: 72%;
+    }
+}
+/* For smaller screens */
+@media (max-width: 480px) {
+    .signup-page .container {
+        width: 95%;
+    }
+    .signup-page form .first, 
+    .signup-page form .second,
+    .signup-page form .pass,
+    .signup-page form .mobile,
+    .signup-page form .email,
+    .signup-page form .gender, 
+    .signup-page form .datebirth {
+        width: 100%;
+    }
+    .signup-page form .gender {
+        width: 85%;
+    }
+    .signup-page form .first input,
+    .signup-page form .second input, 
+    .signup-page form .pass input, 
+    .signup-page form .mobile input, 
+    .signup-page form .email input,
+    .signup-page form .datebirth input {
+        width: 200px;
+    }
+}
+/* End media queries */
+/* End sign up page */
+/* Start login page */
+.login-page {
+    padding: 20px 0;
+    /* border: 1px solid red; */
+    background-color: #dddd;
+}
+.login-page .container {
+    /* border: 1px solid green; */
+    box-shadow:  2px 2px 5px 0 var(--main-color);
+    width: 40%;
+    margin: 30px auto;
+    padding: 20px 0;
+    background-color: white;
+    border-radius: 5px;
+}
+.login-page .container h2, 
+.login-page .container form {
+    text-align: center;
+}
+.login-page .container h2 {
+    /* border: 1px solid red; */
+    color: var(--main-color);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.login-page form .username,
+.login-page form .pass {
+    width: 70%;
+    margin: 0px auto 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.login-page form .username label,
+.login-page form .pass label {
+    font-size: 18px;
+}
+.login-page form .username input,
+.login-page form .pass input {
+    outline: none;
+    padding: 8px 10px;
+    width: 300px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.466);
+}
+.login-page form .remember-forget {
+    /* border: 1px solid red; */
+    width: 60%;
+    margin: 10px auto 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-page form .remember-forget .remember label {
+    margin-left: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.login-page form .remember-forget .remember input {
+    cursor: pointer;
+}
+.login-page form .remember-forget a {
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+.login-page form .remember-forget a:hover {
+    text-decoration: underline;
+}
+.login-page form .submit {
+    width: 70%;
+    margin: 0 auto;
+}
+.login-page form input[type = "submit"] {
+    background: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+}
+/* Start media queries */
+/* For huge screens */
+@media (min-width: 1025px) {
+    /* No media queries */
+}
+/* For larger screens */
+@media (max-width: 1024px) {
+    .login-page .container {
+        width: 60%;
+    }
+    .login-page form .username,
+    .login-page form .pass {
+        width: 75%;
+    }
+    .login-page form .username input,
+    .login-page form .pass input {
+        margin-left: 10px;
+    }
+    .login-page form .remember-forget {
+        width: 65%;
+    }
+}
+/* for medium screens */
+@media (max-width: 768px) {
+    .login-page form .remember-forget {
+        width: 75%;
+    }
+}
+/* For smaller screens */
+@media (max-width: 480px) {
+    .login-page .container {
+        width: 95%;
+    }
+    .login-page form .username,
+    .login-page form .pass {
+        width: 90%;
+    }
+    .login-page form .remember-forget {
+        width: 90%;
+    }
+}
+/* End media queries */
+/* End login page */
+/* Start chat-patient and  chat-doctor*/
+.chat-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    overflow: hidden;
+}
+.chat-header {
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.patient-page .chat-header {
+    background-color: var(--main-color);
+    color: white;
+}
+.doctor-page .chat-header {
+    background-color: #e0e0e0;
+    color: black;
+}
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+.message {
+    margin-bottom: 15px;
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+}
+.doctor {
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    align-self: flex-start;
+}
+.doctor-page .doctor{
+    align-self: flex-end;
+}
+.patient {
+    background-color: var(--main-color);
+    color: white;
+    align-self: flex-end;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.doctor-page .patient{
+    align-self: flex-start;
+}
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+.chat-input input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.chat-input button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .2s;
+}
+.doctor-page .chat-input button {
+    background-color: rgba(0, 0, 0, 0.329);    
+    color: black;
+}
+.doctor-page .chat-input button:hover {
+    background-color: rgba(0, 0, 0, 0.664);
+    color: white;
+}
+.chat-input button:hover {
+    background-color: rgba(0, 119, 255, 0.712);
+}
+/* End chat-patient and  chat-doctor*/

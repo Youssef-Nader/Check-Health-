@@ -1,0 +1,268 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Orthopedics | Stay on Top of Your Health</title>
+        <link rel="icon" href="{% static 'Icons/orthopedics.png' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <!-- Normalize elements -->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    </head>
+    <body>
+        <!-- Start Header -->
+        <header>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'main-page' %}" target="_blank">Specializations</a></li>
+                        <li><a href="{% url 'main-page' %}" target="_blank">About Us</a></li>
+                    </ul>
+                </nav>
+                <a class ="sign" href="{% url 'signup' %}" target="_blank">Sign Up<a>
+                <a class ="login" href="{% url 'login' %}" target="_blank">Login<a>
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- Start orthopedics -->
+        <div class="orthopedics-section">
+            <div class="container">
+                <h2>Orthopedics</h2>
+                <p>Choose Your Best Doctor In <span>Orthopedics</span> Specialize</p>
+                <p class="east-west">Doctors From the East and the West</p>
+                <div class="east-doctors">
+                    <div class="first">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Tarek El-Hossary</h4>
+                        <p class="title">Orthopedic Surgeon - Cairo Orthopedic Clinic</p>
+                        <p class="about-doc">Dr. El-Hossary specializes in complex joint replacements and sports injuries. He is known for his 
+                            advanced surgical techniques and patient-focused approach to post-operative rehabilitation.
+                        </p>
+                        <span class="fees">Fees: 150 EGP</span>
+                        <button id="tarek-button">Book Now</button>
+                    </div>
+                    <div class="second">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Nourhan Sherif</h4>
+                        <p class="title">Orthopedic Consultant - Alexandria University Hospital</p>
+                        <p class="about-doc">Focused on spine surgery and pediatric orthopedic care, Dr. Sherif has been at the forefront of minimal 
+                            invasive surgeries and rehabilitation programs for children with scoliosis
+                        </p>
+                        <span class="fees">Fees: 260 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="third">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Ahmed Samir</h4>
+                        <p class="title">Orthopedic Surgeon - Giza Orthopedic Center</p>
+                        <p class="about-doc">Specializes in knee and shoulder arthroscopy, as well as trauma surgery. Dr. Samir has been an advocate for early 
+                            rehabilitation techniques for faster recovery.
+                        </p>
+                        <span class="fees">Fees: 175 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fourth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Hossam El-Masry</h4>
+                        <p class="title">Joint Replacement Surgeon - Mansoura Medical Center</p>
+                        <p class="about-doc">Dr. El-Masry has extensive experience in joint replacement surgeries, particularly for hip and knee problems. 
+                            He uses the latest technologies in 3D printing for prosthetics.
+                        </p>
+                        <span class="fees">Fees: 350 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fifth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Maha Saad</h4>
+                        <p class="title">Orthopedic Surgeon - Cairo Spine Institute</p>
+                        <p class="about-doc">: Specializing in spinal surgery, Dr. Saad is known for treating scoliosis, degenerative disc diseases, 
+                            and spinal deformities with innovative techniques.
+                        </p>
+                        <span class="fees">Fees: 400 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="sixth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Karim Abdel-Wahab</h4>
+                        <p class="title">Trauma Surgeon - Tanta University Hospital</p>
+                        <p class="about-doc">Dr. Abdel-Wahab focuses on emergency orthopedic trauma, dealing with fractures and multi-trauma cases. 
+                            He uses minimally invasive techniques for faster recovery.
+                        </p>
+                        <span class="fees">Fees: 375 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="seventh">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Eman Fawzy</h4>
+                        <p class="title">Pediatric Orthopedic Specialist - Ain Shams Children's Hospital</p>
+                        <p class="about-doc">: Dr. Fawzy specializes in treating congenital and developmental musculoskeletal disorders in children. 
+                            She combines cutting-edge diagnostics with compassionate care.
+                        </p>
+                        <span class="fees">Fees: 450 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="eighth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Moataz Ghanem</h4>
+                        <p class="title">Orthopedic Surgeon - Assiut Medical Center</p>
+                        <p class="about-doc">Known for his work in hip and knee surgeries, Dr. Ghanem is particularly skilled in arthroplasty 
+                            and knee ligament reconstruction.</p>
+                        <span class="fees">Fees: 700 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="ninth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Yara Hany</h4>
+                        <p class="title">Sports Orthopedic Specialist - New Cairo Sports Clinic</p>
+                        <p class="about-doc">Specializing in sports-related injuries, Dr. Hany focuses on knee, shoulder, and ankle surgeries 
+                            and is a leading figure in rehabilitation programs for athletes.
+                        </p>
+                        <span class="fees">Fees: 550 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="tenth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>10.	Dr. Rania El-Kady</h4>
+                        <p class="title">Orthopedic Surgeon - Suez Canal Hospital</p>
+                        <p class="about-doc">Dr. El-Kady specializes in trauma, fractures, and spine surgeries, particularly using 
+                            minimally invasive techniques for spinal decompression and fusion
+                        </p>
+                        <span class="fees">Fees: 600 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="west-doctors">
+                    <div class="first">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. John Petersonr - (American)</h4>
+                        <p class="title">Orthopedic Surgeon - Johns Hopkins Hospital</p>
+                        <p class="about-doc">A leader in knee and hip replacement surgeries, Dr. Peterson uses robotic surgery 
+                            techniques for more precise and minimally invasive procedures.
+                        </p>
+                        <span class="fees">Fees: $40 USD</span>
+                        <button id="john-button">Book Now</button>
+                    </div>
+                    <div class="second">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Olivia Martinez - (American)</h4>
+                        <p class="title">Pediatric Orthopedic Specialist - Boston Children's Hospital</p>
+                        <p class="about-doc">Dr. Martinez is an expert in pediatric musculoskeletal issues, from congenital conditions to sports 
+                            injuries. She is a renowned researcher in scoliosis treatment.
+                        </p>
+                        <span class="fees">Fees: $55 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="third">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Marco Rossi - (Italian)</h4>
+                        <p class="title">Orthopedic Surgeon - Milan Orthopedic Clinic</p>
+                        <p class="about-doc">Specializes in joint preservation and reconstruction surgeries, particularly for athletes. Dr. Rossi is also recognized for 
+                            his work in treating knee arthritis with minimally invasive techniques.
+                        </p>
+                        <span class="fees">Fees: $60 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fourth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Sara Williams - (British)</h4>
+                        <p class="title">Spine Surgeon - London Spine Clinic</p>
+                        <p class="about-doc">Dr. Williams is a highly sought-after spine specialist, focusing on lumbar spine 
+                            surgeries, disc replacement, and scoliosis correction.
+                        </p>
+                        <span class="fees">Fees: $68 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fifth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Pierre Dupont - (French)</h4>
+                        <p class="title"> Orthopedic Surgeon - Paris Orthopedic Institute</p>
+                        <p class="about-doc">: Dr. Dupont is known for his expertise in hand and wrist surgery, 
+                            particularly treating complex fractures and tendon injuries.
+                        </p>
+                        <span class="fees">Fees: $75 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="sixth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Hannah Schmidt - (German)</h4>
+                        <p class="title">Orthopedic Consultant - Berlin Orthopedic Center</p>
+                        <p class="about-doc">Focused on hip and knee arthroplasty, Dr. Schmidt is a pioneer in the field 
+                            of robotic-assisted joint replacement surgeries.
+                        </p>
+                        <span class="fees">Fees: $52 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="seventh">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Michael Thompson - (Canadian)</h4>
+                        <p class="title">Sports Orthopedic Surgeon - Toronto Sports Medicine Center</p>
+                        <p class="about-doc">Dr. Thompson specializes in sports injuries, particularly in the shoulder and knee areas. He uses cutting-edge 
+                            techniques to treat elite athletes and weekend warriors alike.
+                        </p>
+                        <span class="fees">Fees: $80 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="eighth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Andrea Costa - (Italian)</h4>
+                        <p class="title">Orthopedic Trauma Specialist - Rome Medical Center</p>
+                        <p class="about-doc">Dr. Costa specializes in orthopedic trauma, particularly fractures and complex limb injuries. 
+                            Her innovative treatments have shortened recovery times significantly.
+                        </p>
+                        <span class="fees">Fees: $72 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="ninth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Isabel Fernandez - (Spanish)</h4>
+                        <p class="title">Orthopedic Consultant - Madrid Orthopedic Clinic</p>
+                        <p class="about-doc">Dr. Fernandez specializes in shoulder and elbow surgeries and is known 
+                            for her expertise in rotator cuff repair and ligament reconstruction.</p>
+                        <span class="fees">Fees: $88 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="tenth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Samuel Clark - (Australian)</h4>
+                        <p class="title">Trauma and Reconstruction Surgeon - Sydney Orthopedic Hospital</p>
+                        <p class="about-doc"> Dr. Clark has a strong focus on reconstructive surgery for traumatic limb injuries, and his expertise in 
+                            the latest reconstructive techniques is highly regarded globally.
+                        </p>
+                        <span class="fees">Fees: $85 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End orthopedics -->
+        <footer>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <div class="links">
+                    <div class="specialize">
+                        <a href="{% url 'dermatology' %}" target="_blank">Dermatology</a>
+                        <a href="{% url 'psychiatry' %}" target="_blank">Psychiatry</a>
+                        <a href="{% url 'nutrition-dietetics' %}" target="_blank">Nutrition & Dietetics</a>
+                        <a href="{% url 'cardiology' %}" target="_blank">Cardiology</a>
+                        <a href="">Orthopedics</a>
+                        <a href="{% url 'pulmonology' %}" target="_blank">Pulmonology</a>
+                    </div>
+                    <div class="other">
+                        <a href="{% url 'main-page' %}" target="_blank">Home</a>
+                        <a href="{% url 'main-page' %}" target="_blank">About us</a>
+                    </div>
+                </div>
+                <p>&copy; 2025 Check <span>Health</span>. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>

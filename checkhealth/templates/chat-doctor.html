@@ -1,0 +1,299 @@
+<!-- <!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Chat With Patient</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            }
+            .chat-container {
+            max-width: 700px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            overflow: hidden;
+            }
+            .chat-header {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            }
+            .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            }
+            .message {
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 70%;
+            }
+            .patient {
+            background-color: #dcf8c6;
+            align-self: flex-start;
+            }
+            .doctor {
+            background-color: #e0e0e0;
+            align-self: flex-end;
+            }
+            .chat-input {
+            display: flex;
+            border-top: 1px solid #ccc;
+            }
+            .chat-input input {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            }
+            .chat-input button {
+            padding: 0 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            }
+            .chat-input button:hover {
+            background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="chat-container">
+            <div class="chat-header" id="chatHeader">
+            Chat with Patient
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                Messages will be shown here     comment here 
+            </div>
+            <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type your reply..." />
+            <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <script>
+            function getDoctorName() {
+                let params = new URLSearchParams(window.location.search);
+                return params.get('doctor') || 'Doctor';
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const doctorName = getDoctorName();
+                document.querySelector(".chat-header").textContent = `Chat with Patient`;
+                localStorage.removeItem(`conversation-with-${doctorName}`); // 🧹 Start fresh
+                loadMessages(doctorName);
+                setInterval(() => loadMessages(doctorName), 1000);
+            });
+
+            function loadMessages(doctorName) {
+                const chatMessages = document.getElementById("chatMessages");
+                chatMessages.innerHTML = '';
+                const messages = JSON.parse(localStorage.getItem(`conversation-with-${doctorName}`)) || [];
+                messages.forEach(msg => {
+                    const msgDiv = document.createElement("div");
+                    msgDiv.className = `message ${msg.type}`;
+                    msgDiv.textContent = msg.text;
+                    chatMessages.appendChild(msgDiv);
+                });
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function sendMessage() {
+                const input = document.getElementById("messageInput");
+                const message = input.value.trim();
+                const doctorName = getDoctorName();
+                if (message !== "") {
+                    const newMessage = { text: message, type: 'doctor' };
+                    let messages = JSON.parse(localStorage.getItem(`conversation-with-${doctorName}`)) || [];
+                    messages.push(newMessage);
+                    localStorage.setItem(`conversation-with-${doctorName}`, JSON.stringify(messages));
+                    input.value = "";
+                    loadMessages(doctorName);
+                }
+            }
+        </script>
+    </body>
+</html>  -->
+<!-- /////////////  -->
+<!-- Another code with django -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Doctor Chat | Stay on Top of Your Health</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+                margin: 0;
+                padding: 0;
+            }
+            .chat-container {
+                max-width: 700px;
+                margin: 50px auto;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                display: flex;
+                flex-direction: column;
+                height: 80vh;
+                overflow: hidden;
+            }
+            .chat-header {
+                background-color: #e0e0e0;
+                color: black;
+                padding: 15px;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .chat-messages {
+                flex: 1;
+                padding: 20px;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+            }
+            .message {
+                margin: 10px 0;
+                padding: 10px 15px;
+                border-radius: 10px;
+                max-width: 70%;
+            }
+            .patient {
+                background-color: #dcf8c6;
+                align-self: flex-start;
+            }
+            .doctor {
+                background-color: #e0e0e0;
+                align-self: flex-end;
+            }
+            .chat-input {
+                display: flex;
+                border-top: 1px solid #ccc;
+            }
+            .chat-input input {
+                flex: 1;
+                padding: 15px;
+                border: none;
+                outline: none;
+                font-size: 16px;
+            }
+            .chat-input button {
+                padding: 0 20px;
+                background-color: rgba(0, 0, 0, 0.329);
+                color: black;
+                border: none;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .chat-input button:hover {
+                background-color: #45a049;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="chat-container">
+            <div class="chat-header"></div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type your reply...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <script>
+            function getPatientName() {
+                const params = new URLSearchParams(window.location.search);
+                return params.get('patient') || 'Patient';
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const patientName = getPatientName();
+                document.querySelector(".chat-header").textContent = `Chat with ${patientName}`;
+                loadMessages();
+                setInterval(loadMessages, 2000); // التحديث كل 2 ثانية
+            });
+
+            function loadMessages() {
+                const doctorName = getDoctorName();
+                const patientName = getPatientName();
+                fetch(`/get_messages/?doctor=${encodeURIComponent(doctorName)}&patient=${encodeURIComponent(patientName)}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        const chatMessages = document.getElementById("chatMessages");
+                        chatMessages.innerHTML = ""; // مسح الشات الحالي
+                        data.forEach(msg => {
+                            const msgDiv = document.createElement("div");
+                            msgDiv.className = `message ${msg.sender}`;
+                            msgDiv.textContent = msg.text;
+                            chatMessages.appendChild(msgDiv);
+                        });
+                        chatMessages.scrollTop = chatMessages.scrollHeight; // التمرير لأسفل
+                    });
+            }
+
+            function sendMessage() {
+                const input = document.getElementById("messageInput");
+                const message = input.value.trim();
+                const doctorName = getDoctorName();
+                const patientName = getPatientName();
+
+                if (message !== "") {
+                    fetch("/send_message/", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRFToken": getCookie('csrftoken')
+                        },
+                        body: JSON.stringify({
+                            text: message,
+                            sender: "doctor", // الدكتور هو المرسل
+                            doctor: doctorName,
+                            patient: patientName
+                        })
+                    }).then(() => {
+                        input.value = "";  // مسح المحتوى بعد الإرسال
+                        loadMessages(); // تحديث الرسائل
+                    });
+                }
+            }
+
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+        </script>
+    </body>
+</html>

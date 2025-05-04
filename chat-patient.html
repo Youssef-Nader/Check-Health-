@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat with Doctor | Stay on Top of Your Health</title>
+        <link rel="icon" href="Icons/Chat icon.png">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Normalize elements -->
+        <link rel="stylesheet" href="css/normalize.css">
+    </head>
+    <body class="patient-page">
+        <div class="chat-container">
+            <div class="chat-header patient-page">
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message doctor">Hello, how can I help you?</div>
+            </div>
+            <div class="chat-input">
+                <button type="button"  onclick="document.getElementById('fileInput').click()">Attach File</button>
+                <input type="file" style="display: none;" id="fileInput" onchange="uploadFile()">
+                <input type="text" id="messageInput" placeholder="Type your message here...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+        <script>
+            function getDoctorName() {
+                let params = new URLSearchParams(window.location.search);
+                return params.get('doctor') || 'Doctor';
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                const doctorName = getDoctorName();
+                document.querySelector(".chat-header").textContent = `Chat with Dr. ${doctorName}`;
+                loadMessages(doctorName);
+                setInterval(() => loadMessages(doctorName), 1000);
+
+                // Clear Chat when restart the page
+                window.addEventListener('beforeunload', () => {
+                    const doctorName = getDoctorName();
+                    const conversationKey = `chat-with-${doctorName}-and-Patient`;
+                    localStorage.removeItem(conversationKey);
+                });
+            });
+
+            function loadMessages(doctorName) {
+                const chatMessages = document.getElementById("chatMessages");
+                chatMessages.innerHTML = '';
+                const conversationKey = `chat-with-${doctorName}-and-Patient`;
+                const messages = JSON.parse(localStorage.getItem(conversationKey)) || [];
+                messages.forEach(msg => {
+                    const msgDiv = document.createElement("div");
+                    msgDiv.className = `message ${msg.type}`;
+                    msgDiv.textContent = msg.text;
+                    if (msg.file) {
+                        const fileDiv = document.createElement("div");
+                        fileDiv.className = 'file-message';
+                        fileDiv.textContent = `Attached file: ${msg.file}`;
+                        msgDiv.appendChild(fileDiv);
+                    }
+                    chatMessages.appendChild(msgDiv);
+                });
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            function sendMessage() {
+                const input = document.getElementById("messageInput");
+                const message = input.value.trim();
+                const doctorName = getDoctorName();
+                if (message !== "") {
+                    const newMessage = { text: message, type: 'patient' };
+                    const conversationKey = `chat-with-${doctorName}-and-Patient`;
+                    let messages = JSON.parse(localStorage.getItem(conversationKey)) || [];
+                    messages.push(newMessage);
+                    localStorage.setItem(conversationKey, JSON.stringify(messages));
+                    input.value = "";
+                    loadMessages(doctorName);
+                }
+            }
+
+            function uploadFile() {
+                const fileInput = document.getElementById('fileInput');
+                const file = fileInput.files[0];
+                const doctorName = getDoctorName();
+
+                if (file) {
+                    const newMessage = {
+                        text: 'Patient attached a file',
+                        type: 'patient',
+                        file: file.name
+                    };
+                    const conversationKey = `chat-with-${doctorName}-and-Patient`;
+                    let messages = JSON.parse(localStorage.getItem(conversationKey)) || [];
+                    messages.push(newMessage);
+                    localStorage.setItem(conversationKey, JSON.stringify(messages));
+                    loadMessages(doctorName);
+                    fileInput.value = ""; // Clear the file input
+                }
+            }
+        </script>
+    </body>
+</html>

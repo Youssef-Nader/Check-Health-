@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cardiology | Stay on Top of Your Health</title>
+        <link rel="icon" href="{% static 'Icons/cardiology.png' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <!-- Normalize elements -->
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    </head>
+    <body>
+        <!-- Start Header -->
+        <header>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'main-page' %}" target="_blank">Specializations</a></li>
+                        <li><a href="{% url 'main-page' %}" target="_blank">About Us</a></li>
+                    </ul>
+                </nav>
+                <a class ="sign" href="{% url 'signup' %}" target="_blank">Sign Up<a>
+                <a class ="login" href="{% url 'login' %}" target="_blank">Login<a>
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- Start cardiology -->
+        <div class="cardiology-section">
+            <div class="container">
+                <h2>Cardiology</h2>
+                <p>Choose Your Best Doctor In <span>Cardiology</span> Specialize</p>
+                <p class="east-west">Doctors From the East and the West</p>
+                <div class="east-doctors">
+                    <div class="first">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Ayman El-Shazly</h4>
+                        <p class="title">Consultant Cardiologist - Cairo Heart Institute</p>
+                        <p class="about-doc">With over 20 years of experience, Dr. El-Shazly specializes in interventional cardiology, 
+                            including angioplasty and stent placement. He's a pioneer in minimally invasive cardiac procedures and 
+                            frequently lectures on heart disease prevention.
+                        </p>
+                        <span class="fees">Fees: 150 EGP</span>
+                        <button id="ayman-button">Book Now</button>
+                    </div>
+                    <div class="second">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Mona Hafez</h4>
+                        <p class="title">Cardiologist - Alexandria Medical Center</p>
+                        <p class="about-doc">Dr. Hafez focuses on women's heart health and hypertension. She combines modern diagnostics like 
+                            echocardiography with personalized lifestyle interventions for effective treatment
+                        </p>
+                        <span class="fees">Fees: 260 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="third">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Walid Kamal</h4>
+                        <p class="title">Cardiology Consultant - Assiut University Hospital</p>
+                        <p class="about-doc">Specializing in heart failure and arrhythmia management, 
+                            Dr. Kamal leads research on cardiac biomarkers and remote monitoring of chronic heart conditions.
+                        </p>
+                        <span class="fees">Fees: 175 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fourth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Rasha El-Gendy</h4>
+                        <p class="title">Pediatric Cardiologist - National Heart Institute</p>
+                        <p class="about-doc">Dr. El-Gendy treats congenital heart defects in children and adolescents. 
+                            Her patient-centered approach makes her a sought-after expert in pediatric cardiology.
+                        </p>
+                        <span class="fees">Fees: 350 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fifth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Nour Eldin Salah</h4>
+                        <p class="title">Interventional Cardiologist - Mansoura Heart Hospital</p>
+                        <p class="about-doc">Known for his advanced techniques in cardiac catheterization and acute coronary syndrome management. 
+                            He also mentors young doctors across Egypt.
+                        </p>
+                        <span class="fees">Fees: 400 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="sixth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Yasmin Sobhy</h4>
+                        <p class="title">Consultant Cardiologist - Zagazig General Hospitall</p>
+                        <p class="about-doc">Dr. Sobhy has extensive experience in managing high blood pressure, 
+                            coronary artery disease, and post-operative care for heart surgeries.
+                        </p>
+                        <span class="fees">Fees: 375 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="seventh">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Tamer El-Rouby</h4>
+                        <p class="title">Senior Cardiologist - Beni Suef Cardiology Clinic</p>
+                        <p class="about-doc">Dr. El-Rouby combines modern imaging technologies 
+                            like MRI with holistic lifestyle guidance for heart patients.
+                        </p>
+                        <span class="fees">Fees: 450 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="eighth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Heba Nabil</h4>
+                        <p class="title">Cardiology Specialist - Giza Cardiac Center</p>
+                        <p class="about-doc">Dr. Nabil's work focuses on cardiovascular risk reduction through diet, exercise, and medication optimization.</p>
+                        <span class="fees">Fees: 700 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="ninth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Amr Fekry</h4>
+                        <p class="title">Heart Failure Specialist - Cairo University Hospital</p>
+                        <p class="about-doc">Renowned for his success in treating chronic heart failure patients with 
+                            innovative drug therapies and implantable devices.
+                        </p>
+                        <span class="fees">Fees: 550 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="tenth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Nermin Samir</h4>
+                        <p class="title">Electrophysiologist - Ain Shams University</p>
+                        <p class="about-doc">Dr. Samir is a top expert in treating arrhythmias, performing pacemaker implants, and managing atrial fibrillation cases.</p>
+                        <span class="fees">Fees: 600 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="west-doctors">
+                    <div class="first">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Michael Adams - (American 🇺🇸)</h4>
+                        <p class="title">Interventional Cardiologist - Mayo Clinic</p>
+                        <p class="about-doc">A world-renowned expert in coronary artery disease, Dr. Adams uses cutting-edge robotics for 
+                            cardiac procedures and leads global training programs.
+                        </p>
+                        <span class="fees">Fees: $40 USD</span>
+                        <button id="michael-button">Book Now</button>
+                    </div>
+                    <div class="second">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Elizabeth Carter - (Canadian)</h4>
+                        <p class="title">Cardiologist - Toronto Heart Center</p>
+                        <p class="about-doc">Specializing in preventative cardiology, she integrates AI diagnostics and wearable 
+                            tech to track cardiovascular health in patients remotely.
+                        </p>
+                        <span class="fees">Fees: $55 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="third">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Hugo Bianchi - (Italian)</h4>
+                        <p class="title">Cardiology Specialist - Milan Medical Research Institute</p>
+                        <p class="about-doc">Known for his research in myocardial infarction and his personalized rehab programs 
+                            that help patients regain full heart function.
+                        </p>
+                        <span class="fees">Fees: $60 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fourth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Amelia Brown - (British)</h4>
+                        <p class="title">Consultant Cardiologist - Oxford Heart Foundation</p>
+                        <p class="about-doc">Dr. Brown leads the UK's digital heart monitoring program and is a 
+                            frequent keynote speaker on women's heart health.</p>
+                        <span class="fees">Fees: $68 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fifth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Johannes Muller - (German)</h4>
+                        <p class="title">Cardiologist - Berlin Vascular and Heart Institute</p>
+                        <p class="about-doc">An expert in cholesterol management and cardiometabolic syndrome, he 
+                            promotes long-term prevention strategies.
+                        </p>
+                        <span class="fees">Fees: $75 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="sixth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Sofia Andersson - (Swedish)</h4>
+                        <p class="title">Cardiology Expert - Stockholm Cardiac Lab</p>
+                        <p class="about-doc"> She develops personalized treatment plans combining pharmacology 
+                            with exercise-based cardiac rehabilitation.
+                        </p>
+                        <span class="fees">Fees: $52 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="seventh">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Pablo Garcia - (Spanish)</h4>
+                        <p class="title">Pediatric Cardiologist - Madrid Children's Hospital</p>
+                        <p class="about-doc">Specializes in non-invasive diagnosis and treatment of congenital heart diseases in infants and toddlers.</p>
+                        <span class="fees">Fees: $80 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="eighth">
+                        <img src="{% static 'Icons/Female Doctor.png' %}" alt="female doctor">
+                        <h4>Dr. Olivia Johnson - (Australian)</h4>
+                        <p class="title">Heart Failure Specialist - Melbourne CardioCare</p>
+                        <p class="about-doc">Leads clinical trials in next-gen heart failure therapies 
+                            and is known for her compassionate patient education style.
+                        </p>
+                        <span class="fees">Fees: $72 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="ninth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Ivan Petrov - (Russian)</h4>
+                        <p class="title">Electrophysiologist - Moscow Cardiac Institute</p>
+                        <p class="about-doc">His clinical interests include pacemakers, defibrillators, 
+                            and managing arrhythmic complications post-surgery.</p>
+                        <span class="fees">Fees: $88 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="tenth">
+                        <img src="{% static 'Icons/Male Doctor.png' %}" alt="male doctor">
+                        <h4>Dr. Luc Dubois - (French)</h4>
+                        <p class="title">Cardiologist - Lyon Heart Research Center</p>
+                        <p class="about-doc">Combines classic cardiology with molecular research to uncover genetic links in heart disease.</p>
+                        <span class="fees">Fees: $85 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End cardiology -->
+        <footer>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <div class="links">
+                    <div class="specialize">
+                        <a href="{% url 'dermatology' %}" target="_blank">Dermatology</a>
+                        <a href="{% url 'psychiatry' %}" target="_blank">Psychiatry</a>
+                        <a href="{% url 'nutrition-dietetics' %}" target="_blank">Nutrition & Dietetics</a>
+                        <a href="" target="_blank">Cardiology</a>
+                        <a href="{% url 'orthopedics' %}" target="_blank">Orthopedics</a>
+                        <a href="{% url 'pulmonology' %}" target="_blank">Pulmonology</a>
+                    </div>
+                    <div class="other">
+                        <a href="{% url 'main-page' %}" target="_blank">Home</a>
+                        <a href="{% url 'main-page' %}" target="_blank">About us</a>
+                    </div>
+                </div>
+                <p>&copy; 2025 Check <span>Health</span>. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="{% static 'script.js' %}"></script>
+    </body>
+</html>

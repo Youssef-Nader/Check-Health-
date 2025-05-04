@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dermatology | Stay on Top of Your Health</title>
+        <link rel="icon" href="Icons/dermatology.png">
+        <link rel="stylesheet" href="css/main.css">
+        <!-- Normalize elements -->
+        <link rel="stylesheet" href="css/normalize.css">
+    </head>
+    <body>
+        <!-- Start Header -->
+        <header>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" target="_blank">Specializations</a></li>
+                        <li><a href="index.html" target="_blank">About Us</a></li>
+                    </ul>
+                </nav>
+                <a class ="sign" href="index7.html" target="_blank">Sign Up<a>
+                <a class ="login" href="index8.html" target="_blank">Login<a>
+            </div>
+        </header>
+        <!-- End Header -->
+        <!-- Start dermatology -->
+        <div class="dermatology-section">
+            <div class="container">
+                <h2>Dermatology</h2>
+                <p>Choose Your Best Doctor In <span>Dermatology</span> Specialize</p>
+                <p class="east-west">Doctors From the East and the West</p>
+                <div class="filters">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" onchange="filterDoctors()">
+                        <option value="all">All</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <button type="button" class="asc" onclick="sortDoctors('asc')">From Lowest to Highest</button>
+                    <button type="button" class="desc" onclick="sortDoctors('desc')">From Highest to Lowest</button>
+                </div> 
+                <div class="east-doctors">
+                    <div class="first" data-gender="female" data-fees="150">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Layla El-Masry</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Consultant Dermatologist - Cairo University Hospital</p>
+                        <p class="about-doc">Specializes in acne treatment and pigmentation disorders. Known for her holistic 
+                            skin wellness approach.</p>
+                        <span class="fees">Fees: 150 EGP</span>
+                        <button id="layla-button">Book Now</button>
+                    </div>
+                    <div class="second" data-gender="male" data-fees="260">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Youssef Hegazy</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Senior Dermatologist - Alexandria Skin Center</p>
+                        <p class="about-doc">With 18 years of experience, he focuses on eczema, rosacea, and pediatric dermatology.</p>
+                        <span class="fees">Fees: 260 EGP</span>
+                        <button id="youssef-button">Book Now</button>
+                    </div>
+                    <div class="third" data-gender="female" data-fees="175">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Amina Shoukry</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Dermatology Specialist - Assiut University Hospital</p>
+                        <p class="about-doc">Passionate about treating psoriasis and chronic skin conditions in rural areas.</p>
+                        <span class="fees">Fees: 175 EGP</span>
+                        <button id="amina-button">Book Now</button>
+                    </div>
+                    <div class="fourth" data-gender="female" data-fees="350">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Noura Kamal</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                        </div>
+                        <p class="title">Laser Dermatologist - El Gouna Skin Clinic</p>
+                        <p class="about-doc">Expert in laser therapy and cosmetic dermatology. Known for personalized aesthetic plans.</p>
+                        <span class="fees">Fees: 350 EGP</span>
+                        <button id="noura-button">Book Now</button>
+                    </div>
+                    <div class="fifth" data-gender="male" data-fees="400">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Hany El-Shazly</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Consultant Dermatologist - Mansoura Medical Center</p>
+                        <p class="about-doc">Treats fungal infections, scalp conditions, and dermatitis.</p>
+                        <span class="fees">Fees: 400 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="sixth" data-gender="female" data-fees="375">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Rasha Soliman</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Dermatologist - Tanta University Hospital</p>
+                        <p class="about-doc">Focuses on hormonal acne and adolescent skin issues.</p>
+                        <span class="fees">Fees: 375 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="seventh" data-gender="male" data-fees="450">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Fady Naguib</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Dermatologist - Cairo Skin & Hair Clinic</p>
+                        <p class="about-doc">Special interest in alopecia, PRP therapy, and hair loss solutions.</p>
+                        <span class="fees">Fees: 450 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="eighth" data-gender="female" data-fees="700">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Mariam El-Kholy</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Clinical Dermatologist - Ismailia Medical Center</p>
+                        <p class="about-doc">Advocates skin health awareness and offers virtual skincare coaching.</p>
+                        <span class="fees">Fees: 700 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="ninth" data-gender="male" data-fees="550">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Samir Wahdan</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Consultant Dermatologist - Minya Hospital</p>
+                        <p class="about-doc">Specializes in skin infections and dermatological allergies.</p>
+                        <span class="fees">Fees: 550 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="tenth" data-gender="male" data-fees="600">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Nour El-Din Rami</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Dermatology Specialist - Beni Suef Dermatology Clinic</p>
+                        <p class="about-doc">Works on early skin cancer detection and autoimmune skin diseases.</p>
+                        <span class="fees">Fees: 600 EGP</span>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+                <div class="west-doctors">
+                    <div class="first" data-gender="female" data-fees="40">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Olivia Carter - (American 🇺🇸)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                        </div>
+                        <p class="title">Dermatologist - New York Skin Institute</p>
+                        <p class="about-doc">Expert in anti-aging, chemical peels, and sun damage reversal.</p>
+                        <span class="fees">Fees: $40 USD</span>
+                        <button id="olivia-button">Book Now</button>
+                    </div>
+                    <div class="second" data-gender="female" data-fees="55">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Sophie Lemoine - (French)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Dermatologist - Paris Dermaclinic</p>
+                        <p class="about-doc">Focuses on acne scarring, melasma, and cosmetic dermatology.</p>
+                        <span class="fees">Fees: $55 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="third" data-gender="female" data-fees="60">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Anna Müller - (Swiss ch)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Consultant Dermatologist - Zurich Skin Center</p>
+                        <p class="about-doc">Specializes in psoriasis, laser resurfacing, and skin health diagnostics.</p>
+                        <span class="fees">Fees: $60 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fourth" data-gender="female" data-fees="68">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Emily Watson - (Australian)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                        </div>
+                        <p class="title">Skin Specialist - Sydney Skin Aesthetic</p>
+                        <p class="about-doc">Treats chronic dermatitis and offers holistic skincare routines.</p>
+                        <span class="fees">Fees: $68 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="fifth" data-gender="male" data-fees="75">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Lucas Meyer - (German)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Dermatologist - Berlin Medical Clinic</p>
+                        <p class="about-doc">Advanced in mole screening and early melanoma detection.</p>
+                        <span class="fees">Fees: $75 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="sixth" data-gender="female" data-fees="52">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Isabella Rossi - (Italian)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Cosmetic Dermatologist - Milan Skin Lab</p>
+                        <p class="about-doc">Known for facial contouring, injectables, and scar reduction.</p>
+                        <span class="fees">Fees: $52 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="seventh" data-gender="male" data-fees="80">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Daniel Murphy - (Irish)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Clinical Dermatologist - Dublin Dermacare</p>
+                        <p class="about-doc">Special interest in rosacea and chronic eczema.</p>
+                        <span class="fees">Fees: $80 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="eighth" data-gender="female" data-fees="72">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Natalia Ivanova - (Russian)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Dermatologist - Moscow Skin Research Institute</p>
+                        <p class="about-doc">Advocates skin health awareness and offers virtual skincare coaching.</p>
+                        <span class="fees">Fees: $72 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="ninth" data-gender="female" data-fees="88">
+                        <img src="Icons/Female Doctor.png" alt="female doctor">
+                        <h4>Dr. Chloe Johnson - (Canadian)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Board-Certified Dermatologist - Toronto Aesthetic Clinic</p>
+                        <p class="about-doc">Focuses on cosmetic enhancements and pigmentation issues.</p>
+                        <span class="fees">Fees: $88 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                    <div class="tenth" data-gender="male" data-fees="85">
+                        <img src="Icons/Male Doctor.png" alt="male doctor">
+                        <h4>Dr. Johan Svensson - (Swedish)</h4>
+                        <div class="rating">
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span class="filled">&#9733;</span>
+                            <span>&#9733;</span>
+                        </div>
+                        <p class="title">Consultant Dermatologist - Stockholm Skin Institute</p>
+                        <p class="about-doc">Expertise in laser therapy, tattoo removal, and aging skin.</p>
+                        <span class="fees">Fees: $85 USD</span>
+                        <button>Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End dermatology -->
+        <!-- Start footer -->
+        <footer>
+            <div class="container">
+                <div class="title">
+                    <h1 class="first">Check</h1>
+                    <h1 class="second">Health</h1>
+                </div>
+                <div class="links">
+                    <div class="specialize">
+                        <a href="">Dermatology</a>
+                        <a href="index2.html" target="_blank">Psychiatry</a>
+                        <a href="index3.html" target="_blank">Nutrition & Dietetics</a>
+                        <a href="index4.html" target="_blank">Cardiology</a>
+                        <a href="index5.html" target="_blank">Orthopedics</a>
+                        <a href="index6.html" target="_blank">Pulmonology</a>
+                    </div>
+                    <div class="other">
+                        <a href="index.html" target="_blank">Home</a>
+                        <a href="index.html" target="_blank">About us</a>
+                    </div>
+                </div>
+                <p>&copy; 2025 Check <span>Health</span>. All rights reserved.</p>
+                
+            </div>
+        </footer>
+        <!-- End footer -->
+        <script src="script.js"></script>
+    </body>
+</html> 
+
