@@ -32,6 +32,9 @@ header .container {
 header .title {
     color: white;
 }
+.title {
+    cursor: pointer;
+}
 header .title .second {
     margin-top: -32px;
     margin-left: 38px;

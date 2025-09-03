@@ -1,3 +1,13 @@
+// Going to home page through title header
+let titleHeader = document.querySelector(".title");
+titleHeader.addEventListener("click", () =>{
+    window.open("index.html","_blank")
+});
+// Going to home page through title footer
+let titleFooter = document.querySelector("#titleFooter");
+titleFooter.addEventListener("click", () =>{
+    window.open("index.html","_blank")
+});
 // Get all "Book Now" buttons on specified button
 document.addEventListener("DOMContentLoaded", () => {
     //Buttons on dermatology specialize
